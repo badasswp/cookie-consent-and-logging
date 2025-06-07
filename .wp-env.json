@@ -1,0 +1,10 @@
+{
+	"plugins": ["."],
+	"phpVersion": "8.2",
+	"port": 8184,
+	"testsPort": 8185,
+	"config": {
+		"WP_SITEURL": "http://cookie-consent-and-logging.localhost",
+		"WP_HOME": "http://cookie-consent-and-logging.localhost"
+	}
+}
