@@ -13,6 +13,7 @@ namespace CookieConsentAndLogging\Services;
 
 use CookieConsentAndLogging\Abstracts\Service;
 use CookieConsentAndLogging\Interfaces\Kernel;
+use CookieConsentAndLogging\Posts\Consent;
 use CookieConsentAndLogging\Posts\Cookie;
 
 class Post extends Service implements Kernel {
@@ -35,6 +36,7 @@ class Post extends Service implements Kernel {
 	public function __construct() {
 		$post_types = [
 			Cookie::class,
+			Consent::class,
 		];
 
 		/**
