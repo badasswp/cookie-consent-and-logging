@@ -11,6 +11,7 @@
 namespace CookieConsentAndLogging\Core;
 
 use CookieConsentAndLogging\Interfaces\Kernel;
+use CookieConsentAndLogging\Services\Taxonomy;
 use CookieConsentAndLogging\Services\Post;
 use CookieConsentAndLogging\Services\Admin;
 
@@ -33,6 +34,7 @@ class Container implements Kernel {
 		static::$services = [
 			Admin::class,
 			Post::class,
+			Taxonomy::class,
 		];
 	}
 
