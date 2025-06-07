@@ -11,6 +11,7 @@
 namespace CookieConsentAndLogging\Core;
 
 use CookieConsentAndLogging\Interfaces\Kernel;
+use CookieConsentAndLogging\Services\Post;
 use CookieConsentAndLogging\Services\Admin;
 
 class Container implements Kernel {
@@ -31,6 +32,7 @@ class Container implements Kernel {
 	public function __construct() {
 		static::$services = [
 			Admin::class,
+			Post::class,
 		];
 	}
 
