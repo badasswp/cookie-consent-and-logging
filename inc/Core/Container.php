@@ -11,6 +11,7 @@
 namespace CookieConsentAndLogging\Core;
 
 use CookieConsentAndLogging\Interfaces\Kernel;
+use CookieConsentAndLogging\Services\Editor;
 use CookieConsentAndLogging\Services\Meta;
 use CookieConsentAndLogging\Services\Taxonomy;
 use CookieConsentAndLogging\Services\Post;
@@ -37,6 +38,7 @@ class Container implements Kernel {
 			Post::class,
 			Taxonomy::class,
 			Meta::class,
+			Editor::class,
 		];
 	}
 
