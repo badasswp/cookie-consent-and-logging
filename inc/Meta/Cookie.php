@@ -2,7 +2,7 @@
 /**
  * Cookie Class.
  *
- * This class defines the Cookie
+ * This class defines the Cookie meta
  * for the plugin.
  *
  * @package CookieConsentAndLogging
