@@ -24,7 +24,6 @@ class Editor extends Service implements Kernel {
 	public function register(): void {
 		add_filter( 'gettext', [ $this, 'add_custom_title' ], 20, 3 );
 		add_filter( 'gettext', [ $this, 'add_custom_description' ], 20, 3 );
-		add_action( 'add_meta_boxes', [ $this, 'add_custom_meta_boxes' ] );
 	}
 
 	/**
