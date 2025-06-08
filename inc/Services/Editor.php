@@ -12,6 +12,7 @@ namespace CookieConsentAndLogging\Services;
 
 use CookieConsentAndLogging\Abstracts\Service;
 use CookieConsentAndLogging\Interfaces\Kernel;
+use CookieConsentAndLogging\Posts\Cookie as CookiePost;
 
 class Editor extends Service implements Kernel {
 	/**
@@ -47,7 +48,7 @@ class Editor extends Service implements Kernel {
 
 		$screen = get_current_screen();
 
-		if ( ! $screen || 'ccal_cookie' !== $screen->post_type ) {
+		if ( ! $screen || CookiePost::$name !== $screen->post_type ) {
 			return $translated_text;
 		}
 
@@ -75,7 +76,7 @@ class Editor extends Service implements Kernel {
 
 		$screen = get_current_screen();
 
-		if ( ! $screen || 'ccal_cookie' !== $screen->post_type ) {
+		if ( ! $screen || CookiePost::$name !== $screen->post_type ) {
 			return $translated_text;
 		}
 

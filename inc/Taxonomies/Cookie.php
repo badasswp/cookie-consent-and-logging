@@ -11,6 +11,7 @@
 namespace CookieConsentAndLogging\Taxonomies;
 
 use CookieConsentAndLogging\Abstracts\Taxonomy;
+use CookieConsentAndLogging\Posts\Cookie as CookiePost;
 
 class Cookie extends Taxonomy {
 	/**
@@ -52,6 +53,6 @@ class Cookie extends Taxonomy {
 	 * @return string
 	 */
 	public function get_post_type(): string {
-		return 'ccal_cookie';
+		return CookiePost::$name;
 	}
 }

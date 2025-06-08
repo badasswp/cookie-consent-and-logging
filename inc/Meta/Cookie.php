@@ -20,7 +20,7 @@ class Cookie extends Meta {
 	 *
 	 * @var string
 	 */
-	public static $name = 'ccal_cookie';
+	public static $name = CookiePost::$name;
 
 	/**
 	 * Get Post meta.
