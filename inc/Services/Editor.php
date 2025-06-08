@@ -25,8 +25,6 @@ class Editor extends Service implements Kernel {
 		add_filter( 'gettext', [ $this, 'add_custom_title' ], 20, 3 );
 		add_filter( 'gettext', [ $this, 'add_custom_description' ], 20, 3 );
 		add_action( 'add_meta_boxes', [ $this, 'add_custom_meta_boxes' ] );
-		// add_filter( 'get_user_option_meta-box-order_post', [ $this, 'add_post_custom_box' ] );
-		// add_filter( 'default_hidden_meta_boxes', [ $this, 'add_custom_fields' ], 10, 2 );
 	}
 
 	/**
