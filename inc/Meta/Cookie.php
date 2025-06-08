@@ -34,13 +34,22 @@ class Cookie extends Meta {
 	 * @return mixed[]
 	 */
 	public static function get_post_meta(): array {
+		$post_id = absint( get_the_ID() );
+
 		return [
-			'url' => [
-				'label'     => esc_html__( 'URL', 'cookie-consent-and-logging' ),
-				'value'     => get_post_meta( get_the_ID(), 'url', true ),
+			'ccal_cookie_id'     => [
+				'label'     => esc_html__( 'ID', 'cookie-consent-and-logging' ),
+				'value'     => get_post_meta( $post_id, 'ccal_cookie_id', true ),
 				'type'      => 'string',
-				'default'   => 'https://example.com',
-				'rest_name' => 'url',
+				'default'   => '',
+				'rest_name' => 'ccalCookieId',
+			],
+			'ccal_cookie_domain' => [
+				'label'     => esc_html__( 'Domain', 'cookie-consent-and-logging' ),
+				'value'     => get_post_meta( $post_id, 'ccal_cookie_domain', true ),
+				'type'      => 'string',
+				'default'   => '',
+				'rest_name' => 'ccalCookieDomain',
 			],
 		];
 	}

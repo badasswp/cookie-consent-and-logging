@@ -11,6 +11,7 @@
 namespace CookieConsentAndLogging\Posts;
 
 use CookieConsentAndLogging\Abstracts\Post;
+use CookieConsentAndLogging\Meta\Cookie as CookieMeta;
 
 class Cookie extends Post {
 	/**
@@ -100,14 +101,7 @@ class Cookie extends Post {
 	 * @return mixed[]
 	 */
 	protected function get_post_meta_schema(): array {
-		return [
-			'url' => [
-				'label'   => esc_html__( 'URL', 'cookie-consent-and-logging' ),
-				'value'   => get_post_meta( get_the_ID(), 'url', true ),
-				'type'    => 'string',
-				'default' => 'https://example.com',
-			],
-		];
+		return CookieMeta::get_post_meta();
 	}
 
 	/**
