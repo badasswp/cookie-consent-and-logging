@@ -30,7 +30,7 @@ class Cookie extends Taxonomy {
 	 * @return string
 	 */
 	public function get_singular_label(): string {
-		return 'Cookie';
+		return 'Cookie Category';
 	}
 
 	/**
@@ -41,7 +41,7 @@ class Cookie extends Taxonomy {
 	 * @return string
 	 */
 	public function get_plural_label(): string {
-		return 'Cookies';
+		return 'Cookie Categories';
 	}
 
 	/**
