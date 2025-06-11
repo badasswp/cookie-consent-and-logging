@@ -11,6 +11,7 @@
 namespace CookieConsentAndLogging\Meta;
 
 use CookieConsentAndLogging\Abstracts\Meta;
+use CookieConsentAndLogging\Posts\Cookie as CookiePost;
 
 class Cookie extends Meta {
 	/**
@@ -20,7 +21,7 @@ class Cookie extends Meta {
 	 *
 	 * @var string
 	 */
-	public static $name = CookiePost::$name;
+	public static $name = 'ccal_cookie';
 
 	/**
 	 * Get Post meta.
