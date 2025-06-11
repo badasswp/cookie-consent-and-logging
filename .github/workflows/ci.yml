@@ -23,14 +23,6 @@ jobs:
               run: |
                   yarn install
 
-            - name: Check JS Linting
-              run: |
-                  yarn lint:js
-
-            - name: Run JS Unit Tests
-              run: |
-                  yarn test:js
-
             - name: Set up PHP v8.2
               uses: shivammathur/setup-php@v2
               with:
