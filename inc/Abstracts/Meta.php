@@ -94,8 +94,6 @@ abstract class Meta {
 			throw new \LogicException( __CLASS__ . ' must define post type where meta belongs to.' );
 		}
 
-		add_post_type_support( static::$name, 'custom-fields' );
-
 		foreach ( static::get_post_meta() as $key => $value ) {
 			if ( ! is_array( $value ) || ! isset( $value['type'] ) ) {
 				continue;
