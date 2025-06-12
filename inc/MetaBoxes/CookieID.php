@@ -81,7 +81,7 @@ class CookieID extends MetaBox {
 	public function get_metabox_callback( $post ): void {
 		wp_nonce_field( 'ccal_action', 'ccal_nonce' );
 
-		$cookie_id  = get_post_meta( $post->ID, 'ccal_cookie_id', true );
+		$cookie_id = get_post_meta( $post->ID, 'ccal_cookie_id', true );
 
 		printf(
 			'<input

@@ -81,7 +81,7 @@ class CookieDomain extends MetaBox {
 	public function get_metabox_callback( $post ): void {
 		wp_nonce_field( 'ccal_action', 'ccal_nonce' );
 
-		$cookie_domain  = get_post_meta( $post->ID, 'ccal_cookie_domain', true );
+		$cookie_domain = get_post_meta( $post->ID, 'ccal_cookie_domain', true );
 
 		printf(
 			'<input
