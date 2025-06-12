@@ -56,7 +56,7 @@ class CookieDomain extends MetaBox {
 	 * @return string
 	 */
 	public function get_position(): string {
-		return '';
+		return 'side';
 	}
 
 	/**
@@ -67,7 +67,7 @@ class CookieDomain extends MetaBox {
 	 * @return string
 	 */
 	public function get_priority(): string {
-		return '';
+		return 'high';
 	}
 
 	/**
@@ -89,8 +89,9 @@ class CookieDomain extends MetaBox {
 				class="widefat"
 				name="ccal_cookie_domain"
 				style="margin-top: 5px;"
-			>%1$s</select>',
-			$cookie_domain
+				value="%s"
+			/>',
+			esc_attr( $cookie_domain )
 		);
 	}
 
