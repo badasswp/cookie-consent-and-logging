@@ -184,39 +184,39 @@ abstract class Post {
 		$labels = [
 			'name'          => sprintf(
 				'%1$s',
-				__( $plural_label, 'cookie-consent-and-logging' ),
+				esc_html__( $plural_label, 'cookie-consent-and-logging' ),
 			),
 			'singular_name' => sprintf(
 				'%1$s',
-				__( $singular_label, 'cookie-consent-and-logging' ),
+				esc_html__( $singular_label, 'cookie-consent-and-logging' ),
 			),
 			'add_new'       => sprintf(
 				'%1$s',
-				__( "Add New {$singular_label}", 'cookie-consent-and-logging' ),
+				esc_html__( "Add New {$singular_label}", 'cookie-consent-and-logging' ),
 			),
 			'add_new_item'  => sprintf(
 				'%1$s',
-				__( "Add New {$singular_label}", 'cookie-consent-and-logging' ),
+				esc_html__( "Add New {$singular_label}", 'cookie-consent-and-logging' ),
 			),
 			'new_item'      => sprintf(
 				'%1$s',
-				__( "New {$singular_label}", 'cookie-consent-and-logging' ),
+				esc_html__( "New {$singular_label}", 'cookie-consent-and-logging' ),
 			),
 			'edit_item'     => sprintf(
 				'%1$s',
-				__( "Edit {$singular_label}", 'cookie-consent-and-logging' ),
+				esc_html__( "Edit {$singular_label}", 'cookie-consent-and-logging' ),
 			),
 			'view_item'     => sprintf(
 				'%1$s',
-				__( "View {$singular_label}", 'cookie-consent-and-logging' ),
+				esc_html__( "View {$singular_label}", 'cookie-consent-and-logging' ),
 			),
 			'search_items'  => sprintf(
 				'%1$s',
-				__( "Search {$plural_label}", 'cookie-consent-and-logging' ),
+				esc_html__( "Search {$plural_label}", 'cookie-consent-and-logging' ),
 			),
 			'menu_name'     => sprintf(
 				'%1$s',
-				__( $plural_label, 'cookie-consent-and-logging' ),
+				esc_html__( $plural_label, 'cookie-consent-and-logging' ),
 			),
 		];
 

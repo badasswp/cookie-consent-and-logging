@@ -63,8 +63,8 @@ class Admin extends Service implements Kernel {
 	 */
 	public function register_options_page(): void {
 		add_menu_page(
-			__( 'Cookie Consent And Logging', 'cookie-consent-and-logging' ),
-			__( 'Cookie Consent And Logging', 'cookie-consent-and-logging' ),
+			esc_html__( 'Cookie Consent And Logging', 'cookie-consent-and-logging' ),
+			esc_html__( 'Cookie Consent And Logging', 'cookie-consent-and-logging' ),
 			'manage_options',
 			self::PLUGIN_SLUG,
 			[ $this, 'register_options_cb' ],
@@ -84,8 +84,8 @@ class Admin extends Service implements Kernel {
 		$this->options = get_option( self::PLUGIN_OPTION, [] );
 		?>
 		<div class="wrap">
-			<h1><?php _e( 'Cookie Consent And Logging', 'cookie-consent-and-logging' ); ?></h1>
-			<p><?php _e( 'Manage Cookie consent & logging on your WP website.', 'cookie-consent-and-logging' ); ?></p>
+			<h1><?php esc_html_e( 'Cookie Consent And Logging', 'cookie-consent-and-logging' ); ?></h1>
+			<p><?php esc_html_e( 'Manage Cookie consent & logging on your WP website.', 'cookie-consent-and-logging' ); ?></p>
 			<form method="post" action="options.php">
 			<?php
 				settings_fields( self::PLUGIN_GROUP );
