@@ -11,6 +11,8 @@
 namespace CookieConsentAndLogging\Posts;
 
 use CookieConsentAndLogging\Abstracts\Post;
+use CookieConsentAndLogging\Services\Admin;
+
 
 class Consent extends Post {
 	/**
@@ -86,7 +88,7 @@ class Consent extends Post {
 	 * @return bool
 	 */
 	protected function is_post_visible_in_menu(): bool {
-		return true;
+		return Admin::PLUGIN_SLUG;
 	}
 
 	/**
