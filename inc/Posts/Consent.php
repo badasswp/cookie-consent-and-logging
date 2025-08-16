@@ -13,7 +13,6 @@ namespace CookieConsentAndLogging\Posts;
 use CookieConsentAndLogging\Abstracts\Post;
 use CookieConsentAndLogging\Services\Admin;
 
-
 class Consent extends Post {
 	/**
 	 * Post type.
