@@ -12,7 +12,6 @@ namespace CookieConsentAndLogging\Posts;
 
 use CookieConsentAndLogging\Abstracts\Post;
 use CookieConsentAndLogging\Services\Admin;
-
 use CookieConsentAndLogging\Meta\Cookie as CookieMeta;
 
 class Cookie extends Post {
