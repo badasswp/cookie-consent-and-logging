@@ -16,6 +16,7 @@ use CookieConsentAndLogging\Interfaces\Kernel;
 use CookieConsentAndLogging\MetaBoxes\CookieID;
 use CookieConsentAndLogging\MetaBoxes\ConsentName;
 use CookieConsentAndLogging\MetaBoxes\CookieDomain;
+use CookieConsentAndLogging\MetaBoxes\ConsentSetting;
 
 class MetaBox extends Service implements Kernel {
 	/**
@@ -39,6 +40,7 @@ class MetaBox extends Service implements Kernel {
 			CookieID::class,
 			CookieDomain::class,
 			ConsentName::class,
+			ConsentSetting::class,
 		];
 
 		/**
