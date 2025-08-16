@@ -24,7 +24,7 @@ class Post extends Service implements Kernel {
 	 *
 	 * @var mixed[]
 	 */
-	public array $objects;
+	public array $objects = [];
 
 	/**
 	 * Set up.
