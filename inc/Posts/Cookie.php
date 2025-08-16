@@ -86,9 +86,9 @@ class Cookie extends Post {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @return bool
+	 * @return bool|string
 	 */
-	protected function is_post_visible_in_menu(): bool {
+	protected function is_post_visible_in_menu() {
 		return Admin::PLUGIN_SLUG;
 	}
 

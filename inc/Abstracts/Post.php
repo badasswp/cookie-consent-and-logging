@@ -100,9 +100,9 @@ abstract class Post {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @return bool
+	 * @return bool|string
 	 */
-	abstract protected function is_post_visible_in_menu(): bool;
+	abstract protected function is_post_visible_in_menu();
 
 	/**
 	 * Save post type.
