@@ -52,7 +52,7 @@ class Editor extends Service implements Kernel {
 			return $translated_text;
 		}
 
-		return __( 'Cookie Name', 'cookie-consent-and-logging' );
+		return esc_html__( 'Cookie Name', 'cookie-consent-and-logging' );
 	}
 
 	/**
@@ -80,6 +80,6 @@ class Editor extends Service implements Kernel {
 			return $translated_text;
 		}
 
-		return __( 'Type in a detailed description for the Cookie and what it does...', 'cookie-consent-and-logging' );
+		return esc_html__( 'Type in a detailed description for the Cookie and what it does...', 'cookie-consent-and-logging' );
 	}
 }
