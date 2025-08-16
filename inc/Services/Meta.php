@@ -12,6 +12,7 @@ namespace CookieConsentAndLogging\Services;
 
 use CookieConsentAndLogging\Abstracts\Service;
 use CookieConsentAndLogging\Interfaces\Kernel;
+use CookieConsentAndLogging\Meta\Consent;
 use CookieConsentAndLogging\Meta\Cookie;
 
 class Meta extends Service implements Kernel {
@@ -34,6 +35,7 @@ class Meta extends Service implements Kernel {
 	public function __construct() {
 		$meta = [
 			Cookie::class,
+			Consent::class,
 		];
 
 		/**

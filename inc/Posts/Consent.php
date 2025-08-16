@@ -12,6 +12,7 @@ namespace CookieConsentAndLogging\Posts;
 
 use CookieConsentAndLogging\Abstracts\Post;
 use CookieConsentAndLogging\Services\Admin;
+use CookieConsentAndLogging\Meta\Consent as ConsentMeta;
 
 class Consent extends Post {
 	/**
@@ -101,14 +102,7 @@ class Consent extends Post {
 	 * @return mixed[]
 	 */
 	protected function get_post_meta_schema(): array {
-		return [
-			'url' => [
-				'label'   => esc_html__( 'URL', 'cookie-consent-and-logging' ),
-				'value'   => get_post_meta( get_the_ID(), 'url', true ),
-				'type'    => 'string',
-				'default' => 'https://example.com',
-			],
-		];
+		return ConsentMeta::get_post_meta();
 	}
 
 	/**
