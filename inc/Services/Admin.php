@@ -67,9 +67,18 @@ class Admin extends Service implements Kernel {
 			esc_html__( 'Cookie Consent And Logging', 'cookie-consent-and-logging' ),
 			'manage_options',
 			self::PLUGIN_SLUG,
-			[ $this, 'register_options_cb' ],
+			null,
 			'dashicons-admin-customizer',
 			100
+		);
+
+		add_submenu_page(
+			self::PLUGIN_SLUG,
+			esc_html__( 'Settings', 'manage-block-template' ),
+			esc_html__( 'Settings', 'manage-block-template' ),
+			'manage_options',
+			self::PLUGIN_SLUG,
+			[ $this, 'register_options_cb' ],
 		);
 	}
 
