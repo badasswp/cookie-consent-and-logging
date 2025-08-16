@@ -81,16 +81,17 @@ class CookieDomain extends MetaBox {
 	public function get_metabox_callback( $post ): void {
 		wp_nonce_field( 'ccal_action', 'ccal_nonce' );
 
-		$cookie_domain = get_post_meta( $post->ID, 'ccal_cookie_domain', true );
+		$cookie_domain = get_post_meta( $post->ID, static::$name, true );
 
 		printf(
 			'<input
 				type="text"
 				class="widefat"
-				name="ccal_cookie_domain"
+				name="%s"
 				style="margin-top: 5px;"
 				value="%s"
 			/>',
+			esc_attr( static::$name ),
 			esc_attr( $cookie_domain )
 		);
 	}
@@ -105,12 +106,14 @@ class CookieDomain extends MetaBox {
 	 * @return void
 	 */
 	public function save_meta_box( $post_id, $post ): void {
+		$name = static::$name;
+
 		// Verify nonce.
 		if ( ! isset( $_POST['ccal_nonce'] ) || ! wp_verify_nonce( $_POST['ccal_nonce'], 'ccal_action' ) ) {
 			return;
 		}
 
 		// Sanitize and save data.
-		update_post_meta( $post_id, 'ccal_cookie_domain', sanitize_text_field( $_POST['ccal_cookie_domain'] ?? '' ) );
+		update_post_meta( $post_id, $name, sanitize_text_field( $_POST[ $name ] ?? '' ) );
 	}
 }
