@@ -14,6 +14,7 @@ namespace CookieConsentAndLogging\Services;
 use CookieConsentAndLogging\Abstracts\Service;
 use CookieConsentAndLogging\Interfaces\Kernel;
 use CookieConsentAndLogging\MetaBoxes\CookieID;
+use CookieConsentAndLogging\MetaBoxes\ConsentName;
 use CookieConsentAndLogging\MetaBoxes\CookieDomain;
 
 class MetaBox extends Service implements Kernel {
@@ -24,7 +25,7 @@ class MetaBox extends Service implements Kernel {
 	 *
 	 * @var mixed[]
 	 */
-	public array $objects;
+	public array $objects = [];
 
 	/**
 	 * Set up.
@@ -37,6 +38,7 @@ class MetaBox extends Service implements Kernel {
 		$meta_boxes = [
 			CookieID::class,
 			CookieDomain::class,
+			ConsentName::class,
 		];
 
 		/**
@@ -71,8 +73,6 @@ class MetaBox extends Service implements Kernel {
 		 * Specify MetaBox Instance types.
 		 *
 		 * @since 1.0.0
-		 *
-		 * @var CookieID|CookieDomain $object
 		 */
 		foreach ( $this->objects as $object ) {
 			add_action( 'publish_' . $object->get_post_type(), [ $object, 'save_meta_box' ], 10, 2 );

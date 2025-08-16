@@ -77,7 +77,7 @@ class Consent extends Post {
 	 * @return bool
 	 */
 	protected function is_post_visible_in_rest(): bool {
-		return true;
+		return false;
 	}
 
 	/**
