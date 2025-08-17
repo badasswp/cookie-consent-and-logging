@@ -17,7 +17,7 @@
     "ci": "yarn test:js && yarn lint:js",
     "wp-env": "wp-env",
     "bash": "wp-env run cli bash",
-		"setup": "chmod +x bin/setup.sh && bin/setup.sh",
+		"setup": "chmod +x bin/setup.sh && bin/setup.sh"
 	},
   "devDependencies": {
     "@babel/core": "^7.22.11",
