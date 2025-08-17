@@ -77,7 +77,7 @@ class Admin extends Service implements Kernel {
 			esc_html__( 'Settings', 'manage-block-template' ),
 			esc_html__( 'Settings', 'manage-block-template' ),
 			'manage_options',
-			self::PLUGIN_SLUG,
+			'ccal_settings',
 			[ $this, 'register_options_cb' ],
 		);
 	}
