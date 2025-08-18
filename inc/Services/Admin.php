@@ -350,7 +350,7 @@ class Admin extends Service implements Kernel {
 			esc_attr( self::PLUGIN_OPTION ),
 			esc_attr( self::CCAL_CONTENT ),
 			esc_attr( $this->options[ self::CCAL_CONTENT ] ?? '' ),
-			esc_html__( 'To provide the best experiences, we use cookies to store and/or access device information. Consenting to these technologies will allow us to process data such as browsing behavior or unique IDs on this site.', 'cookie-consent-and-logging' )
+			esc_html__( 'We use cookies to provide you the best user experience on our website.', 'cookie-consent-and-logging' )
 		);
 	}
 

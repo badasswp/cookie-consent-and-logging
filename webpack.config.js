@@ -5,7 +5,7 @@ module.exports = {
 	...defaultConfig,
 
 	entry: {
-		app: './src/index.tsx',
+		ccal: './src/index.tsx',
 	},
 
 	output: {
