@@ -1,0 +1,42 @@
+[
+  {
+    "ID": "_ga",
+    "category": "Statistics",
+    "company": "Google",
+    "description": "This is used by Google Analytics to store and count pageviews.",
+    "expiration": "2 years",
+    "domain": "www.google.com"
+  },
+  {
+    "ID": "_ga_*",
+    "category": "Statistics",
+    "company": "Google",
+    "description": "This is used by Google Analytics to store and count pageviews.",
+    "expiration": 365,
+    "domain": "www.google.com"
+  },
+  {
+    "ID": "_gat_*",
+    "category": "Functional",
+    "company": "Google",
+    "description": "This is used by Google Analytics to read and filter requests from bots.",
+    "expiration": "1 minute",
+    "domain": "www.google.com"
+  },
+  {
+    "ID": "_gac_UA-*",
+    "category": "Statistics",
+    "company": "Google",
+    "description": "This is used by Google Ads & Google Analytics to store and count pageviews.",
+    "expiration": 90,
+    "domain": "www.google.com"
+  },
+  {
+    "ID": "_gat_UA",
+    "category": "Functional",
+    "company": "Google",
+    "description": "This is used by Google Analytics to read and filter requests from bots.",
+    "expiration": "",
+    "domain": "www.google.com"
+  }
+]
