@@ -56,7 +56,7 @@ class CookieDomain extends MetaBox {
 	 * @return string
 	 */
 	public function get_position(): string {
-		return 'side';
+		return '';
 	}
 
 	/**
