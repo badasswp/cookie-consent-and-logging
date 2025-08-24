@@ -127,6 +127,13 @@ class Post extends Service implements Kernel {
 				10,
 				1
 			);
+
+			add_filter(
+				'hidden_meta_boxes',
+				[ $object, 'hide_post_attribute_meta_box' ],
+				10,
+				2
+			);
 		}
 	}
 }

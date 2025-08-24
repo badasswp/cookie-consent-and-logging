@@ -333,6 +333,14 @@ abstract class Post {
 		return $columns;
 	}
 
+	public function hide_post_attribute_meta_box( $hidden, $screen ) {
+		if ( get_post_type() === static::$name ) {
+			$hidden[] = 'pageparentdiv';
+		}
+
+		return $hidden;
+	}
+
 	/**
 	 * Get Permalink.
 	 *
