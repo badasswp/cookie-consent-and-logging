@@ -54,7 +54,7 @@ class Consent extends Post {
 	 * @return string[]
 	 */
 	protected function get_supports(): array {
-		return [ 'title', 'thumbnail', 'editor' ];
+		return [ 'title', 'editor' ];
 	}
 
 	/**
