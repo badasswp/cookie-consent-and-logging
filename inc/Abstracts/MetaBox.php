@@ -46,7 +46,7 @@ abstract class MetaBox {
 	 *
 	 * @return string
 	 */
-	public function get_name(): string {
+	protected function get_name(): string {
 		return static::$name;
 	}
 
@@ -57,7 +57,7 @@ abstract class MetaBox {
 	 *
 	 * @return string
 	 */
-	abstract public function get_heading(): string;
+	abstract protected function get_heading(): string;
 
 	/**
 	 * Get Meta box parent post type.
@@ -81,24 +81,24 @@ abstract class MetaBox {
 	/**
 	 * Get Meta box position.
 	 *
-	 * By default this would take 'normal', 'side', or 'advanced'.
+	 * By default, this would take 'normal', 'side', or 'advanced'.
 	 *
 	 * @since 1.0.0
 	 *
 	 * @return string
 	 */
-	abstract public function get_position(): string;
+	abstract protected function get_position(): string;
 
 	/**
 	 * Get Meta box priority.
 	 *
-	 * By default this would take 'default', 'low', 'high' or 'core'.
+	 * By default, this would take 'default', 'low', 'high' or 'core'.
 	 *
 	 * @since 1.0.0
 	 *
 	 * @return string
 	 */
-	abstract public function get_priority(): string;
+	abstract protected function get_priority(): string;
 
 	/**
 	 * Save Meta box.
@@ -118,7 +118,7 @@ abstract class MetaBox {
 	 *
 	 * @return bool
 	 */
-	public function is_visible(): bool {
+	protected function is_visible(): bool {
 		return true;
 	}
 

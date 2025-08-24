@@ -33,7 +33,7 @@ class CookieDomain extends MetaBox {
 	 *
 	 * @return string
 	 */
-	public function get_heading(): string {
+	protected function get_heading(): string {
 		return 'Cookie Domain';
 	}
 
@@ -55,7 +55,7 @@ class CookieDomain extends MetaBox {
 	 *
 	 * @return string
 	 */
-	public function get_position(): string {
+	protected function get_position(): string {
 		return '';
 	}
 
@@ -66,7 +66,7 @@ class CookieDomain extends MetaBox {
 	 *
 	 * @return string
 	 */
-	public function get_priority(): string {
+	protected function get_priority(): string {
 		return 'high';
 	}
 

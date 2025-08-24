@@ -33,7 +33,7 @@ class CookieExpiration extends MetaBox {
 	 *
 	 * @return string
 	 */
-	public function get_heading(): string {
+	protected function get_heading(): string {
 		return 'Cookie Expiration';
 	}
 
@@ -55,7 +55,7 @@ class CookieExpiration extends MetaBox {
 	 *
 	 * @return string
 	 */
-	public function get_position(): string {
+	protected function get_position(): string {
 		return '';
 	}
 
@@ -66,7 +66,7 @@ class CookieExpiration extends MetaBox {
 	 *
 	 * @return string
 	 */
-	public function get_priority(): string {
+	protected function get_priority(): string {
 		return 'high';
 	}
 
