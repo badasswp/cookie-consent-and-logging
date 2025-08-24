@@ -146,7 +146,7 @@ abstract class MetaBox {
 		 * @param mixed[] $options Meta box name, heading, post_type, position, priority.
 		 * @return mixed[]
 		 */
-		$meta_box = (array) apply_filters( 'cookie_consent_and_logging_metabox_options', $options );
+		$meta_box = apply_filters( 'cookie_consent_and_logging_metabox_options', $options );
 
 		if ( ! $this->is_visible() ) {
 			return;
