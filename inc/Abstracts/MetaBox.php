@@ -153,12 +153,12 @@ abstract class MetaBox {
 		}
 
 		add_meta_box(
-			$meta_box['name'],
-			esc_html__( $meta_box['heading'], 'cookie-consent-and-logging' ),
+			$meta_box['name'] ?? '',
+			esc_html__( ( $meta_box['heading'] ?? '' ), 'cookie-consent-and-logging' ),
 			[ $this, 'get_metabox_callback' ],
-			$meta_box['post_type'],
-			$meta_box['position'] ?: 'advanced',
-			$meta_box['priority'] ?: 'default'
+			$meta_box['post_type'] ?? '',
+			empty( $meta_box['position'] ) ? 'normal' : $meta_box['position'],
+			empty( $meta_box['priority'] ) ? 'default' : $meta_box['priority'],
 		);
 	}
 }
