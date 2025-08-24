@@ -38,19 +38,26 @@ class Cookie extends Meta {
 		$post_id = absint( get_the_ID() );
 
 		return [
-			'ccal_cookie_id'     => [
+			'ccal_cookie_id'         => [
 				'label'     => esc_html__( 'Cookie ID', 'cookie-consent-and-logging' ),
 				'value'     => get_post_meta( $post_id, 'ccal_cookie_id', true ),
 				'type'      => 'string',
 				'default'   => '',
 				'rest_name' => 'ccalCookieId',
 			],
-			'ccal_cookie_domain' => [
-				'label'     => esc_html__( 'Cookie Domain', 'cookie-consent-and-logging' ),
-				'value'     => get_post_meta( $post_id, 'ccal_cookie_domain', true ),
+			'ccal_cookie_company'    => [
+				'label'     => esc_html__( 'Cookie Company', 'cookie-consent-and-logging' ),
+				'value'     => get_post_meta( $post_id, 'ccal_cookie_company', true ),
 				'type'      => 'string',
 				'default'   => '',
-				'rest_name' => 'ccalCookieDomain',
+				'rest_name' => 'ccalCookieCompany',
+			],
+			'ccal_cookie_expiration' => [
+				'label'     => esc_html__( 'Cookie Expiration', 'cookie-consent-and-logging' ),
+				'value'     => get_post_meta( $post_id, 'ccal_cookie_expiration', true ),
+				'type'      => 'string',
+				'default'   => '',
+				'rest_name' => 'ccalCookieExpiration',
 			],
 		];
 	}
