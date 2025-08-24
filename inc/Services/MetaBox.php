@@ -16,6 +16,8 @@ use CookieConsentAndLogging\Interfaces\Kernel;
 use CookieConsentAndLogging\MetaBoxes\CookieID;
 use CookieConsentAndLogging\MetaBoxes\ConsentName;
 use CookieConsentAndLogging\MetaBoxes\CookieDomain;
+use CookieConsentAndLogging\MetaBoxes\CookieCompany;
+use CookieConsentAndLogging\MetaBoxes\CookieExpiration;
 use CookieConsentAndLogging\MetaBoxes\ConsentSetting;
 use CookieConsentAndLogging\MetaBoxes\ConsentIPAddress;
 
@@ -40,6 +42,8 @@ class MetaBox extends Service implements Kernel {
 		$meta_boxes = [
 			CookieID::class,
 			CookieDomain::class,
+			CookieCompany::class,
+			CookieExpiration::class,
 			ConsentName::class,
 			ConsentSetting::class,
 			ConsentIPAddress::class,
