@@ -123,7 +123,7 @@ abstract class MetaBox {
 	}
 
 	/**
-	 * Get meta box Options.
+	 * Get meta box options.
 	 *
 	 * @since 1.0.0
 	 *

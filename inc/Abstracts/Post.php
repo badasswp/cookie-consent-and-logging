@@ -140,7 +140,7 @@ abstract class Post {
 	}
 
 	/**
-	 * Return post type options.
+	 * Get post type options.
 	 *
 	 * @since 1.0.0
 	 *
@@ -333,7 +333,15 @@ abstract class Post {
 		return $columns;
 	}
 
-	public function hide_post_attribute_meta_box( $hidden, $screen ) {
+	/**
+	 * Hide Post Attribute meta box.
+	 *
+	 * @param string[]   $hidden Array containing meta box IDs to be hidden.
+	 * @param \WP_Screen $screen WP Screen object.
+	 *
+	 * @return string[]
+	 */
+	public function hide_post_attribute_meta_box( $hidden, $screen ): array {
 		if ( get_post_type() === static::$name ) {
 			$hidden[] = 'pageparentdiv';
 		}
