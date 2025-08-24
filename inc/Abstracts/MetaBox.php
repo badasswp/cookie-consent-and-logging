@@ -123,13 +123,13 @@ abstract class MetaBox {
 	}
 
 	/**
-	 * Register meta box.
+	 * Get meta box Options.
 	 *
 	 * @since 1.0.0
 	 *
-	 * @return void
+	 * @return mixed[]
 	 */
-	public function register_meta_box(): void {
+	protected function get_options(): array {
 		$options = [
 			'name'      => $this->get_name(),
 			'heading'   => $this->get_heading(),
@@ -146,19 +146,31 @@ abstract class MetaBox {
 		 * @param mixed[] $options Meta box name, heading, post_type, position, priority.
 		 * @return mixed[]
 		 */
-		$meta_box = apply_filters( 'cookie_consent_and_logging_metabox_options', $options );
+		return apply_filters( 'cookie_consent_and_logging_metabox_options', $options );
+	}
 
+	/**
+	 * Register meta box.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return void
+	 */
+	public function register_meta_box(): void {
+		$options = $this->get_options();
+
+		// Bail out, if not visible.
 		if ( ! $this->is_visible() ) {
 			return;
 		}
 
 		add_meta_box(
-			$meta_box['name'] ?? '',
-			esc_html__( ( $meta_box['heading'] ?? '' ), 'cookie-consent-and-logging' ),
+			$options['name'] ?? '',
+			esc_html__( ( $options['heading'] ?? '' ), 'cookie-consent-and-logging' ),
 			[ $this, 'get_metabox_callback' ],
-			$meta_box['post_type'] ?? '',
-			empty( $meta_box['position'] ) ? 'normal' : $meta_box['position'],
-			empty( $meta_box['priority'] ) ? 'default' : $meta_box['priority'],
+			$options['post_type'] ?? '',
+			empty( $options['position'] ) ? 'normal' : $options['position'],
+			empty( $options['priority'] ) ? 'default' : $options['priority'],
 		);
 	}
 }
