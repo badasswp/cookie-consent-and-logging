@@ -81,6 +81,8 @@ abstract class MetaBox {
 	/**
 	 * Get Meta box position.
 	 *
+	 * By default this would take 'normal', 'side', or 'advanced'.
+	 *
 	 * @since 1.0.0
 	 *
 	 * @return string
@@ -89,6 +91,8 @@ abstract class MetaBox {
 
 	/**
 	 * Get Meta box priority.
+	 *
+	 * By default this would take 'default', 'low', 'high' or 'core'.
 	 *
 	 * @since 1.0.0
 	 *
