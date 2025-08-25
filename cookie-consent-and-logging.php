@@ -41,3 +41,11 @@ if ( ! file_exists( COOKIE_CONSENT_AND_LOGGING_AUTOLOAD ) ) {
 // Run Plugin.
 require_once COOKIE_CONSENT_AND_LOGGING_AUTOLOAD;
 ( \CookieConsentAndLogging\Plugin::get_instance() )->run();
+
+// Run activation hook.
+register_activation_hook(
+	__FILE__,
+	function () {
+		\CookieConsentAndLogging\Services\Setup::init()
+	}
+);

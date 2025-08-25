@@ -11,6 +11,7 @@
 namespace CookieConsentAndLogging\Core;
 
 use CookieConsentAndLogging\Interfaces\Kernel;
+use CookieConsentAndLogging\Services\Setup;
 use CookieConsentAndLogging\Services\Banner;
 use CookieConsentAndLogging\Services\MetaBox;
 use CookieConsentAndLogging\Services\Editor;
@@ -43,6 +44,7 @@ class Container implements Kernel {
 			Editor::class,
 			MetaBox::class,
 			Banner::class,
+			Setup::class,
 		];
 	}
 
