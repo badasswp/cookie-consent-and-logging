@@ -33,6 +33,6 @@ class Setup extends Service implements Kernel {
 	 * @return void
 	 */
 	public static function init(): void {
-		// Do nothing...
+		// Do nothing for now...
 	}
 }

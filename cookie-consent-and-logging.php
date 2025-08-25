@@ -46,6 +46,6 @@ require_once COOKIE_CONSENT_AND_LOGGING_AUTOLOAD;
 register_activation_hook(
 	__FILE__,
 	function () {
-		\CookieConsentAndLogging\Services\Setup::init()
+		\CookieConsentAndLogging\Services\Setup::init();
 	}
 );
