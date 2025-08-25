@@ -38,5 +38,85 @@
     "description": "This is used by Google Analytics to read and filter requests from bots.",
     "expiration": "",
     "domain": "www.google.com"
+  },
+  {
+    "ID": "__utmd",
+    "category": "Marketing",
+    "company": "Google",
+    "description": "This is used by Google Analytics to store and track visitor journeys through the site and classifies them into groups.",
+    "expiration": "1 second",
+    "domain": "www.google.com"
+  },
+  {
+    "ID": "utm_source",
+    "category": "Statistics",
+    "company": "Google",
+    "description": "This is used by Google Analytics to provide parameters to URLs to identify the campaigns that refer traffic.",
+    "expiration": "Immediately",
+    "domain": "www.google.com"
+  },
+  {
+    "ID": "utm_campaign",
+    "category": "Statistics",
+    "company": "Google",
+    "description": "This is used by Google Analytics to provide parameters to URLs to identify the campaigns that refer traffic.",
+    "expiration": "Immediately",
+    "domain": "www.google.com"
+  },
+  {
+    "ID": "__utmt",
+    "category": "Statistics",
+    "company": "Google",
+    "description": "This is used by Google Analytics to store number of service requests.",
+    "expiration": "10 minutes",
+    "domain": "www.google.com"
+  },
+  {
+    "ID": "__utmd",
+    "category": "Marketing",
+    "company": "Google",
+    "description": "This is used by Google Analytics to store and track visitor journeys through the site and classifies them into groups.",
+    "expiration": "1 second",
+    "domain": "www.google.com"
+  },
+  {
+    "ID": "__utmb",
+    "category": "Statistics",
+    "company": "Google",
+    "description": "This is used by Google Analytics to store time of visit.",
+    "expiration": "Session",
+    "domain": "www.google.com"
+  },
+  {
+    "ID": "__utm.gif",
+    "category": "Statistics",
+    "company": "Google",
+    "description": "This is used by Google Analytics to store browser details.",
+    "expiration": "Session",
+    "domain": "www.google.com"
+  },
+  {
+    "ID": "*_utm",
+    "category": "Statistics",
+    "company": "Google",
+    "description": "This is used by Google Analytics to store and track visits across websites.",
+    "expiration": "Session",
+    "domain": "www.google.com"
+  },
+  {
+    "ID": "__utmv",
+    "category": "Marketing",
+    "company": "Google",
+    "description": "This is used by Google Analytics with unknown functionality.",
+    "expiration": "2 years",
+    "domain": "www.google.com"
+  },
+  {
+    "ID": "UTMD_",
+    "category": "Statistics",
+    "company": "Google",
+    "description": "This is used by Google Analytics to store and count pageviews.",
+    "expiration": "",
+    "domain": "www.google.com"
   }
 ]
