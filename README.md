@@ -2,6 +2,12 @@
 
 Manage Cookie consent & logging on your WP website.
 
+<img width="449" height="417" alt="screenshot-1" src="https://github.com/user-attachments/assets/6c07ff60-7e2d-4d8f-b42e-4713319ae17b" />
+
+---
+
+<img width="673" height="657" alt="screenshot-2" src="https://github.com/user-attachments/assets/085a24b0-0444-40a6-a4f4-af0d0a145268" />
+
 ## Why Cookie Consent & Logging?
 
 In today’s digital landscape, transparency and accountability have become non-negotiable cornerstones of user trust. Cookie consent isn’t just about compliance with regulations like GDPR or CCPA, __it's about giving users control__ over their __personal data__. By explicitly asking for consent, websites demonstrate respect for user privacy, ensuring that tracking technologies are only activated when individuals agree.
